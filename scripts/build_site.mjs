@@ -90,6 +90,7 @@ for (const [name, markdown] of Object.entries(pages)) {
     used.set(base, count + 1);
     return `<h${level} id="${base}${count ? `-${count}` : ''}">${text}</h${level}>`;
   }).replace(/href="(guidelines|source-audit|validation|use)\.md/g, 'href="$1.html')
+    .replace('href="guidelines.html">Markdown guidelines', 'href="guidelines.md">Markdown guidelines')
     .replaceAll('<table>', '<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>')
     .replaceAll('</table>', '</table></div>');
   await write(`${name}.html`, `<!doctype html>
