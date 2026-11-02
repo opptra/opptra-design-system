@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Source audit · Opptra design system</title><meta name="description" content="Opptra design system 0.1.0: brand language, component contracts and semantic tokens."><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;600;700&family=Raleway:wght@400;500;600&display=swap"><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="site.css"></head><body><a class="skip" href="#content">Skip to content</a><header><a href="index.html">Opptra design system</a><nav aria-label="Documentation"><a href="index.html">Gallery</a><a href="guidelines.html">Guidelines</a><a href="use.html">Use in a mockup</a><a href="tokens.json">JSON tokens</a></nav></header><main id="content"><p class="meta">PROPOSED REFERENCE · 0.1.0 · 02 NOV 2026</p><article><h1 id="source-audit-and-design-decisions">Source audit and design decisions</h1>
+<p>Inspected 2 November 2026. This is a bounded brand-system study of the homepage and existing brand guidance, not an audit of every page on opptra.com.</p>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Live website observation</th>
+<th>Existing Opptra guidance</th>
+<th>Handoff decision</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Identity</td>
+<td>eCommerce operations and brand growth; practical language about marketplace work</td>
+<td>Navy for structure and authority</td>
+<td>Propose a voice centered on clear ownership, useful next steps and evidence-backed outcomes</td>
+</tr>
+<tr>
+<td>Typography</td>
+<td>Spectral large headings, Raleway body/navigation; some h3 elements use Raleway</td>
+<td>Spectral for headings; Raleway for body and controls</td>
+<td>Standardize semantic headings on Spectral; keep compact UI labels in Raleway</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>Orange #FF5800, pale yellow #FFFCE8, text #22221F, white</td>
+<td>Navy #131A48, orange #FF5800, pale yellow #FFFCE8, body #5A5A5A</td>
+<td>Carry orange/yellow and typography forward; use existing navy as the product structure</td>
+</tr>
+<tr>
+<td>Actions</td>
+<td>Pill CTAs with white text on orange</td>
+<td>Orange emphasis; navy structure; no small orange text on white</td>
+<td>Propose navy text on orange and a dark-orange text/link token; document the accessibility reason</td>
+</tr>
+<tr>
+<td>Geometry</td>
+<td>Rounded hero imagery and pills; generous whitespace</td>
+<td>Adequate logo clear space</td>
+<td>Use expressive rounding for brand imagery and smaller, consistent radii for business controls</td>
+</tr>
+<tr>
+<td>Logo</td>
+<td>Current SVG from the live homepage</td>
+<td>Older logo CDN reference</td>
+<td>Use the current observed logo asset with source attribution; no new logo or inferred lockup</td>
+</tr>
+<tr>
+<td>Product states</td>
+<td>Homepage is not evidence for a complete business UI system</td>
+<td>No complete state library in branding guidance</td>
+<td>New tokens for statuses, borders, focus, density and component states are proposals</td>
+</tr>
+</tbody></table></div>
+<h2 id="primary-source-references">Primary source references</h2>
+<ul>
+<li><a href="https://www.opptra.com/">Live homepage</a>, observed through rendered browser and computed styles at 1280 × 720.</li>
+<li><a href="https://cdn.prod.website-files.com/6933cd7135f6e590ffef0761/css/opptra---dev.webflow.shared.84794a841.css">Observed stylesheet</a>.</li>
+<li><a href="https://cdn.prod.website-files.com/6933cd7135f6e590ffef0761/6937f6a9040488e80b8e30b0_logo.svg">Observed current logo</a>.</li>
+<li>Established Opptra brand guidance, reviewed on the inspection date.</li>
+<li><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a> and <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">contrast guidance</a>, checked on the inspection date.</li>
+</ul>
+<h2 id="initial-contrast-measurements">Initial contrast measurements</h2>
+<p>Ratios calculated from the specified sRGB colors, using the WCAG relative-luminance formula. Rounded for display; tests must use unrounded values.</p>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Pair</th>
+<th align="right">Ratio</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>White / brand orange</td>
+<td align="right">3.16:1</td>
+<td>Avoid for normal-size CTA text</td>
+</tr>
+<tr>
+<td>Navy / brand orange</td>
+<td align="right">5.24:1</td>
+<td>Proposed orange CTA treatment</td>
+</tr>
+<tr>
+<td>White / navy</td>
+<td align="right">16.55:1</td>
+<td>Structural dark surfaces and primary actions</td>
+</tr>
+<tr>
+<td>Body gray #5A5A5A / white</td>
+<td align="right">6.90:1</td>
+<td>Body copy on white</td>
+</tr>
+<tr>
+<td>Light gray #CECECE / white</td>
+<td align="right">1.57:1</td>
+<td>Decorative separators only when boundary conveys no essential information</td>
+</tr>
+<tr>
+<td>Live dark orange #D74A00 / white</td>
+<td align="right">4.31:1</td>
+<td>Still below the 4.5:1 normal-text threshold</td>
+</tr>
+<tr>
+<td>Proposed dark orange #B53F00 / white</td>
+<td align="right">5.71:1</td>
+<td>Proposed links and small accent text</td>
+</tr>
+</tbody></table></div>
+<p>These measurements cover color pairs only. They do not establish accessibility conformance, final font rendering, keyboard behavior or screen-reader compatibility. Actual gallery verification is recorded in <a href="validation.html">validation</a>.</p>
+<h2 id="evidence-limits">Evidence limits</h2>
+<p>No stakeholder interviews, user research, logo-rights review, complete website audit, adoption baseline or production-system inspection was conducted. Marketing claims on the public site were not independently verified and are not used as synthetic business values. New guidelines and component behavior need stakeholder adoption and implementation validation.</p>
+</article><p class="notice"><a href="source-audit.md">Read the Markdown source</a> · <a href="SKILL.md">Agent instructions</a></p></main><footer>Opptra design language · Proposed reference 0.1.0 · Synthetic demonstrations</footer></body></html>

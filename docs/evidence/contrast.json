@@ -1,0 +1,167 @@
+[
+  {
+    "foreground": "color-ink",
+    "background": "color-surface",
+    "colors": [
+      "#131A48",
+      "#FFFFFF"
+    ],
+    "ratio": 16.5482,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-text",
+    "background": "color-canvas",
+    "colors": [
+      "#323642",
+      "#FAFAF7"
+    ],
+    "ratio": 11.5285,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-text-muted",
+    "background": "color-surface",
+    "colors": [
+      "#5A5A5A",
+      "#FFFFFF"
+    ],
+    "ratio": 6.8969,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-link",
+    "background": "color-surface",
+    "colors": [
+      "#B53F00",
+      "#FFFFFF"
+    ],
+    "ratio": 5.7131,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-link",
+    "background": "color-surface-accent",
+    "colors": [
+      "#B53F00",
+      "#FFFCE8"
+    ],
+    "ratio": 5.5339,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-text-inverse",
+    "background": "color-action-primary",
+    "colors": [
+      "#FFFFFF",
+      "#131A48"
+    ],
+    "ratio": 16.5482,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-text-inverse",
+    "background": "color-action-primary-hover",
+    "colors": [
+      "#FFFFFF",
+      "#252F65"
+    ],
+    "ratio": 12.5509,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-ink",
+    "background": "color-action-accent",
+    "colors": [
+      "#131A48",
+      "#FF5800"
+    ],
+    "ratio": 5.2386,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-ink",
+    "background": "color-action-accent-hover",
+    "colors": [
+      "#131A48",
+      "#FF8C4F"
+    ],
+    "ratio": 7.1836,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-border-control",
+    "background": "color-surface",
+    "colors": [
+      "#76767D",
+      "#FFFFFF"
+    ],
+    "ratio": 4.5085,
+    "threshold": 3,
+    "pass": true
+  },
+  {
+    "foreground": "color-success",
+    "background": "color-success-surface",
+    "colors": [
+      "#226644",
+      "#EDF7F0"
+    ],
+    "ratio": 6.2789,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-warning",
+    "background": "color-warning-surface",
+    "colors": [
+      "#815700",
+      "#FFF6D6"
+    ],
+    "ratio": 5.8863,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-danger",
+    "background": "color-danger-surface",
+    "colors": [
+      "#B42331",
+      "#FFF0F0"
+    ],
+    "ratio": 5.8827,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-info",
+    "background": "color-info-surface",
+    "colors": [
+      "#304B88",
+      "#EDF2FD"
+    ],
+    "ratio": 7.5253,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "foreground": "color-text-inverse",
+    "background": "color-danger",
+    "colors": [
+      "#FFFFFF",
+      "#B42331"
+    ],
+    "ratio": 6.5108,
+    "threshold": 4.5,
+    "pass": true
+  }
+]

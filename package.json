@@ -1,0 +1,13 @@
+{
+  "name": "opptra-design-system",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build_site.mjs",
+    "check": "python3 scripts/check.py"
+  },
+  "devDependencies": {
+    "marked": "17.0.5"
+  }
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Validation record · Opptra design system</title><meta name="description" content="Opptra design system 0.1.0: brand language, component contracts and semantic tokens."><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;600;700&family=Raleway:wght@400;500;600&display=swap"><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="site.css"></head><body><a class="skip" href="#content">Skip to content</a><header><a href="index.html">Opptra design system</a><nav aria-label="Documentation"><a href="index.html">Gallery</a><a href="guidelines.html">Guidelines</a><a href="use.html">Use in a mockup</a><a href="tokens.json">JSON tokens</a></nav></header><main id="content"><p class="meta">PROPOSED REFERENCE · 0.1.0 · 02 NOV 2026</p><article><h1 id="validation-record">Validation record</h1>
+<p>Executed 2 November 2026 for proposed reference 0.1.0. These are targeted design-reference checks, not production QA or a full accessibility-conformance assessment.</p>
+<h2 id="rendered-reference">Rendered reference</h2>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Executed result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Desktop browser</td>
+<td>1280 × 720 CSS-pixel viewport; document scroll width 1280px. Overview and business composition inspected visually</td>
+</tr>
+<tr>
+<td>Narrow layout</td>
+<td>Same-origin iframe with a 390 × 844 CSS-pixel viewport, inside the desktop browser. Document client width, document scroll width and body scroll width all 390px after the fix. This is a real narrow browsing context, not physical-device or mobile-browser validation</td>
+</tr>
+<tr>
+<td>Table containment</td>
+<td>Channel table: 301px container / 557px contents. Listing table: 309px container / 617px contents. Both use local horizontal scrolling; no page-wide overflow remains</td>
+</tr>
+<tr>
+<td>Anchored heading</td>
+<td>Desktop composition heading measured at y=223.98px below an 85px header, after navigation settled</td>
+</tr>
+<tr>
+<td>Typography and assets</td>
+<td>Computed sampled headings use Spectral; body/control declarations use Raleway. Browser font status loaded. Both official logo images loaded in this session</td>
+</tr>
+<tr>
+<td>Token parity</td>
+<td>84 CSS custom properties and 84 JSON entries; exact names and raw values match, including aliases. See <a href="evidence/token-parity.json">token-parity.json</a></td>
+</tr>
+<tr>
+<td>Static structure</td>
+<td>UX checked 73 unique HTML IDs, all 35 ID references, all ten section anchors, and JavaScript syntax. The coordinator checked the delivered source and reference behavior</td>
+</tr>
+</tbody></table></div>
+<h2 id="executed-interactions">Executed interactions</h2>
+<ul>
+<li>An empty brand-name submission shows a specific correction, sets <code>aria-invalid</code> and focuses the field. A valid submission shows a local synthetic success result.</li>
+<li>ArrowRight from the Summary tab selects History, updates the visible panel and moves focus to its tab.</li>
+<li>Searching sample listings for an unmatched query produces zero rows and a recovery action. Clear filters restores all three rows.</li>
+<li>Bag review shows the selected listing&#39;s proposed title change and a draft action. Cup details show its live state, 128 units and stale timestamp without a save action. Lamp details show a known zero and no invented edit/save action.</li>
+<li>Saving the bag&#39;s demo draft closes the dialog and shows a confirmation explicitly stating that no live data changed. Dismissing that toast returns focus to the originating row action.</li>
+<li>Opening the review dialog initially focuses Cancel. Tab moves to Save. Escape closes the modal and returns focus to its opener. Native modal semantics are used; this was a focused keyboard walkthrough, not an exhaustive browser or assistive-technology test.</li>
+<li>The illustrative busy button is disabled and exposes <code>aria-busy=&quot;true&quot;</code>; the sample cannot accept duplicate clicks.</li>
+</ul>
+<h2 id="color-measurements">Color measurements</h2>
+<p>The coordinator calculated fifteen prescribed foreground/background pairs using the WCAG sRGB relative-luminance formula. All fifteen meet the selected threshold: 4.5:1 for ordinary text and 3:1 for the control boundary. Full values and thresholds: <a href="evidence/contrast.json">contrast.json</a>.</p>
+<p>Examples: navy/orange 5.2386:1; white/navy 16.5482:1; dark-orange link/white 5.7131:1; control border/white 4.5085:1. The website&#39;s white/orange pair is 3.1589:1 and is intentionally replaced for ordinary-size action labels. These results apply to the specified pairs, not every possible token combination or complete rendered-page conformance. The underlying threshold references are <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">W3C contrast guidance</a> and <a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>.</p>
+<h2 id="findings-resolved-during-review">Findings resolved during review</h2>
+<ol>
+<li>The loading sample accepted clicks despite describing duplicate-submit prevention. It is now a disabled busy illustration with an explicit phrase.</li>
+<li>Absolutely positioned hidden text in wide table actions escaped its scroll container at 390px. Positioned table/button containers now keep it contained; measured page scroll width changed from 596px to 390px. No root-overflow masking was applied.</li>
+<li>Row details needed to reflect the selected listing. Contextual detail/review content now distinguishes the bag, cup and lamp; only a defined proposal offers Save.</li>
+<li>Toast dismissal needed a valid focus destination after its dialog closed. It now remembers the originating control; the final flow was retested.</li>
+</ol>
+<h2 id="evidence">Evidence</h2>
+<p>Public numerical evidence is available in the linked JSON files. Original review records and screenshots are retained with the private source.</p>
+<h2 id="limits-and-adoption-work">Limits and adoption work</h2>
+<p>No physical-device, screen-reader, cross-browser, 200%-zoom, font-failure, long-translation, real-data or production-permission testing was conducted. The CSS specifies reduced-motion behavior; the OS preference was not toggled in this review. Fallback fonts and a logo error handler were inspected in source; the successful network session did not exercise a forced failure.</p>
+<p>The guide retains the official logo URL, provenance and a text fallback; network fonts and logo remain external dependencies. No stakeholder approval, user research or adoption outcomes are inferred from the PM/UX reviews. Framework choice, ongoing owner and stakeholder adoption remain nonblocking follow-up decisions for this handoff.</p>
+</article><p class="notice"><a href="validation.md">Read the Markdown source</a> · <a href="SKILL.md">Agent instructions</a></p></main><footer>Opptra design language · Proposed reference 0.1.0 · Synthetic demonstrations</footer></body></html>

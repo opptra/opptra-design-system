@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brand language and components · Opptra design system</title><meta name="description" content="Opptra design system 0.1.0: brand language, component contracts and semantic tokens."><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;600;700&family=Raleway:wght@400;500;600&display=swap"><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="site.css"></head><body><a class="skip" href="#content">Skip to content</a><header><a href="index.html">Opptra design system</a><nav aria-label="Documentation"><a href="index.html">Gallery</a><a href="guidelines.html">Guidelines</a><a href="use.html">Use in a mockup</a><a href="tokens.json">JSON tokens</a></nav></header><main id="content"><p class="meta">PROPOSED REFERENCE · 0.1.0 · 02 NOV 2026</p><article><h1 id="opptra-brand-language-and-component-library">Opptra brand language and component library</h1>
+<p>Design artifact version 1 · Proposed reference release 0.1.0 · 02 Nov 2026</p>
+<p>This package defines a website-informed Opptra identity, reusable foundations and 27 component families for designers, PMs and engineers. It is a framework-neutral design handoff with interactive reference examples. Independent PM–UX agreement is internal artifact acceptance; brand approval, user validation, implementation feasibility and production accessibility testing remain separate.</p>
+<p>Open the <a href="index.html">responsive reference gallery</a>. Supporting files: <a href="tokens.css">semantic CSS tokens</a>, <a href="tokens.json">JSON tokens</a>, <a href="gallery.css">gallery styles</a> and <a href="gallery.js">local demonstration interactions</a>. See the <a href="source-audit.html">source audit</a>, <a href="validation.html">validation record</a> and <a href="use.html">usage guide</a>.</p>
+<h2 id="source-authority-and-reconciliation">Source authority and reconciliation</h2>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>What it establishes</th>
+<th>How the proposal uses it</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>S1 · Design-system brief, 02 Nov 2026</td>
+<td>Define Opptra brand language and component library using opptra.com</td>
+<td>A bounded design reference; audience and product patterns are working assumptions</td>
+</tr>
+<tr>
+<td>S2 · <a href="https://www.opptra.com/">Current public website</a>, inspected 02 Nov 2026</td>
+<td>Positioning around operational ownership, marketplace execution and brand growth</td>
+<td>Direct, outcome-led voice; the guide avoids reusing unverified quantitative claims</td>
+</tr>
+<tr>
+<td>S3 · Computed homepage styles/visual inspection recorded in the brief</td>
+<td>Spectral/Raleway, #FF5800, #FFFCE8, #22221F, open spacing, rounded imagery, pill CTAs; some live headings use Raleway</td>
+<td>Preserve the recognizable expressive vocabulary; distinguish observed details from recommended product rules</td>
+</tr>
+<tr>
+<td>S4 · Existing Opptra branding skill, read 02 Nov 2026</td>
+<td>Navy #131A48 structure, orange accent, soft yellow, Spectral headings, Raleway body/UI</td>
+<td>Retain navy as the structural color and standardize headings to Spectral</td>
+</tr>
+<tr>
+<td>S5 · <a href="https://www.w3.org/TR/WCAG22/">W3C WCAG 2.2</a></td>
+<td>Design expectations for contrast, keyboard operation, reflow, names, errors and status</td>
+<td>Specifies design intent; the validation record states actual checks and limits</td>
+</tr>
+</tbody></table></div>
+<p>The current website logo is the <a href="https://cdn.prod.website-files.com/6933cd7135f6e590ffef0761/6937f6a9040488e80b8e30b0_logo.svg">official SVG asset referenced by the inspected site</a>. The older branding skill points to an older asset; this guide uses the current reference. No logo redraw, variant or lockup is proposed as approved.</p>
+<p>Observed website traits are not proof of an approved design system or accessibility. In particular, observed white text on orange is not adopted for ordinary-size action labels. #22221F is retained in the audit as a live-site neutral; navy and readable neutral grays are the proposed product text system. Semantic statuses, layouts, radii, component contracts and all business UI in this package are <strong>proposed extensions</strong>, not an inventory of existing Opptra product components.</p>
+<h2 id="brand-language">Brand language</h2>
+<h3 id="personality-and-visual-principles">Personality and visual principles</h3>
+<p><strong>Confident:</strong> establish a clear hierarchy and a decisive next step. Navy creates structure; Spectral brings an assured, human voice. Avoid filling every available area with controls.</p>
+<p><strong>Grounded:</strong> use real work, concrete language and attributed data. Show permission, source freshness and the difference between zero and unknown. Do not decorate incomplete information into certainty.</p>
+<p><strong>In motion:</strong> help a person move through a task. Orange signals emphasis and active position. Changes are brief and purposeful; motion never carries essential information alone.</p>
+<h3 id="voice-and-message-hierarchy">Voice and message hierarchy</h3>
+<p>Lead with the task or outcome, add the useful context, then name the next action. In marketing, connect a brand&#39;s goal to the operational work Opptra takes on. In product UI, describe the current state and the next step. Use active verbs and ordinary English. Explain the practical work performed by automation rather than relying on AI language as evidence of value.</p>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Proposed or synthetic example</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Marketing headline</td>
+<td>“Your next market. A clear path forward.”</td>
+<td>One idea, sentence case, no unsupported superlative</td>
+</tr>
+<tr>
+<td>Marketing support</td>
+<td>“Bring your brand to new marketplaces with an operating partner for launch, daily execution and growth.”</td>
+<td>Explain the work; no invented quantity or guaranteed result</td>
+</tr>
+<tr>
+<td>Marketing CTA</td>
+<td>“Explore Opptra”</td>
+<td>Specific destination; website link is real</td>
+</tr>
+<tr>
+<td>Task title</td>
+<td>“Review listing changes”</td>
+<td>Use a verb + object</td>
+</tr>
+<tr>
+<td>Action label</td>
+<td>“Save demo draft”</td>
+<td>Explain the effect; distinguish save from publish</td>
+</tr>
+<tr>
+<td>Empty</td>
+<td>“No listings match these filters. Clear a filter to see more.”</td>
+<td>Explain the scope; give a recovery action</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>“We couldn&#39;t load the latest data. Try again. Your saved changes are safe.”</td>
+<td>Say what failed and what remains safe only when implementation guarantees it</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>“Enter a brand name to save this example.”</td>
+<td>Identify the field and correction</td>
+</tr>
+<tr>
+<td>Success</td>
+<td>“Your draft is saved. Review it before publishing.”</td>
+<td>Confirm the precise result; no false completion</td>
+</tr>
+<tr>
+<td>Permission</td>
+<td>“You can view this brand. Ask an administrator for editing access.”</td>
+<td>Explain capability and a real request route when implemented</td>
+</tr>
+<tr>
+<td>Missing</td>
+<td>“Not available — source not connected.”</td>
+<td>Explain unknown; never substitute zero</td>
+</tr>
+<tr>
+<td>Freshness</td>
+<td>“Last synced 01 Nov 2026, 18:00 IST. Review the source before acting.”</td>
+<td>Absolute timestamp with timezone and implication</td>
+</tr>
+</tbody></table></div>
+<p>Copy above is proposed language. All examples involving brands, listings, people, permissions and figures are synthetic. Validate recovery/safety promises against the actual implementation before reuse. Keep required and optional field labels explicit; do not rely on asterisks or placeholder text alone. Use sentence case for headings, labels and actions. Use abbreviations only where the intended audience understands them; expand unfamiliar ones on first use. Avoid exclamation marks in system messages, blaming users and vague labels such as “Submit” when the result can be named.</p>
+<h3 id="logo-imagery-and-icons">Logo, imagery and icons</h3>
+<p>Use the supplied SVG at its intrinsic aspect ratio. Do not recolor, skew, rotate, crop or rebuild it. Proposed minimum display width: 96px, subject to brand-owner review. Proposed clear space: at least one capital “O” height on every side, including mobile headers. Place it on a plain light surface; obtain an approved inverse asset for dark surfaces. The dark product header in the synthetic composition uses plain “OPPTRA / WORKSPACE” text to avoid inventing an inverse mark.</p>
+<p>Photography should show real products, people or local market context with one clear subject and natural color. Use wide, quiet crops in marketing with 24px rounded corners; avoid generic AI imagery as evidence of capability. Product screens prioritize information over decorative imagery. Supporting geometric circles in the gallery are proposed decorative graphics, hidden from assistive technology, and are not a logo treatment. No supplied photography was downloaded or repackaged.</p>
+<p>Use one consistent outline icon set: a 20px box and 1.5px stroke as the proposed baseline, scaling to 16px in compact contexts. Match corner/stroke behavior across the set. Decorative icons use <code>aria-hidden=&quot;true&quot;</code>; standalone action icons require an accessible name and, where unclear, a visible label. Never encode status, permission or freshness through an icon or color alone. Do not mix arbitrary filled, outline and emoji icons in a production interface; gallery text symbols indicate prototype meaning.</p>
+<h3 id="marketing-and-product-application">Marketing and product application</h3>
+<p>Marketing uses display typography, a 42rem reading width, broad imagery and 64–96px section spacing. Product work uses the same colors/typefaces at 14–16px UI sizes, 24–32px task spacing and 16px table-cell padding. Product metrics use Raleway with tabular numerals. Both contexts use one prominent action per task, orange accents, dark navy structure, and warm yellow callouts. Large orange background slabs and multiple competing CTA colors weaken the hierarchy and are not recommended.</p>
+<h2 id="foundations-and-layout">Foundations and layout</h2>
+<p>The complete 84-token registry is exported with identical keys and raw values in CSS and JSON. Tokens beginning <code>--opptra-</code> preserve the established primitives. Semantic tokens encode purpose so implementations can change a value without renaming every use. Every exported entry records <code>origin</code> as <code>existing-guidance</code> or <code>proposed-extension</code>; existing type/color values also observed on the website are noted in the JSON metadata. <code>var()</code> aliases are preserved as explicit strings, not flattened.</p>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Foundation</th>
+<th>Tokens / values</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Brand</td>
+<td><code>--opptra-navy</code> #131A48; <code>--opptra-orange</code> #FF5800; <code>--opptra-orange-hover</code> #FF8C4F; <code>--opptra-yellow</code> #FFFCE8</td>
+<td>Established identity values</td>
+</tr>
+<tr>
+<td>Text</td>
+<td><code>--color-ink</code> navy; <code>--color-text</code> #323642; <code>--color-text-muted</code> #5A5A5A; <code>--color-text-inverse</code> white</td>
+<td>Hierarchy on light surfaces; white only on strong dark fills</td>
+</tr>
+<tr>
+<td>Surface</td>
+<td><code>--color-canvas</code> #FAFAF7; <code>--color-surface</code> white; <code>--color-surface-subtle</code> #F2F3F5; accent yellow</td>
+<td>Page / card / subtle group / contextual callout</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Primary navy, primary hover #252F65; accent orange, hover light orange; link #B53F00</td>
+<td>Orange action labels use navy; underlined links use the darker proposed orange</td>
+</tr>
+<tr>
+<td>Borders</td>
+<td>Decorative #DDDEE4; control #76767D; width 1px</td>
+<td>Decorative lines do not carry essential control boundaries. Fields use the stronger token</td>
+</tr>
+<tr>
+<td>Semantics</td>
+<td>Success #226644 / #EDF7F0; warning #815700 / #FFF6D6; danger #B42331 / #FFF0F0; info #304B88 / #EDF2FD</td>
+<td>Proposed text/foreground and surface pairs; pair with an explicit label</td>
+</tr>
+<tr>
+<td>Disabled</td>
+<td>#6A6D78 on #EDEEF1</td>
+<td>Explain why an unavailable action matters nearby; do not rely solely on muted color</td>
+</tr>
+<tr>
+<td>Typefaces</td>
+<td>Spectral, Georgia, serif; Raleway, Segoe UI, sans-serif</td>
+<td>All semantic headings use Spectral; controls/body use Raleway</td>
+</tr>
+<tr>
+<td>Type scale</td>
+<td>Caption 12; small 14; body 16; lead 18; H3 24; H2 36; display clamp 48–80px</td>
+<td>Display 300 weight, headings 600, body 400/500, UI 600; body line-height 1.6, heading 1.1</td>
+</tr>
+<tr>
+<td>Spacing</td>
+<td>4, 8, 12, 16, 24, 32, 48, 64, 96px</td>
+<td>Tight within controls, 24px card padding, 32px task spacing, 64–96px storytelling sections</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>Wide 12 columns; narrow 4; content max 76rem; reading max 42rem; gallery rail 12.5rem</td>
+<td>24px standard gaps. Gallery&#39;s documentation layout uses a rail plus content; nested preview grids use 2 or 3 columns</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>6px small; 12px medium; 24px large; 999px pill</td>
+<td>Fields / operational cards / large editorial panels / buttons and badges</td>
+</tr>
+<tr>
+<td>Elevation</td>
+<td>Raised 0 8px 28px #131A4812; overlay 0 24px 80px #131A4833</td>
+<td>Flat by default; elevation distinguishes floating overlays or a full composition</td>
+</tr>
+<tr>
+<td>Motion</td>
+<td>120ms fast; 180ms standard; cubic-bezier(.2,0,0,1)</td>
+<td>Color/state transition. Reduced-motion preference removes transitions/animations and smooth scrolling</td>
+</tr>
+<tr>
+<td>Focus</td>
+<td>3px navy outline, 3px offset, 2px white halo; orange-hover on <code>.dark</code> inverse areas</td>
+<td>White halo separates outline from dark surfaces; inset/double ring may be needed in clipped production containers</td>
+</tr>
+<tr>
+<td>Controls</td>
+<td>Small 36px; default 44px; large 52px</td>
+<td>44px is a usability default. This exceeds WCAG 2.2&#39;s 24px minimum target where that AA criterion applies; 44px is not described as the AA requirement</td>
+</tr>
+</tbody></table></div>
+<p>Color calculations provided by the coordinator: white/navy 16.55:1; navy/orange 5.24:1; white/orange 3.16:1; #B53F00/white 5.71:1; #5A5A5A/white 6.90:1. White/brand orange fails ordinary text contrast. Darkened live-site #D74A00 is still 4.31:1, so it is not a normal-text fallback. The previous #CECECE light gray is retained as a primitive, but at 1.57:1 against white it cannot carry an essential control outline. See the coordinator&#39;s final validation for the checked semantic pairs. These calculations do not establish complete conformance.</p>
+<h3 id="responsive-rules">Responsive rules</h3>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Viewport</th>
+<th>Gallery/layout behavior</th>
+<th>Data and controls</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Above 1100px</td>
+<td>Sticky 12.5rem side rail; max-width documentation container; two-column component panels; three-column metrics</td>
+<td>44px default actions, 16px table cells; no hover-only content</td>
+</tr>
+<tr>
+<td>851–1100px</td>
+<td>Rail narrows to 10rem; gaps/padding reduce; table toolbar stacks</td>
+<td>Full content labels remain; no truncation of important state or units</td>
+</tr>
+<tr>
+<td>601–850px</td>
+<td>Rail becomes a sticky horizontal section list below the 76px header; content fills width</td>
+<td>Navigation scrolls locally; touch and keyboard links remain available</td>
+</tr>
+<tr>
+<td>Up to 600px; checked target 390px</td>
+<td>Single-column component panels, two-column palette, 4-column conceptual grid, 24px card padding, 5% page gutters</td>
+<td>Metric cards become rows; forms remain full width; dialog is viewport minus 32px; buttons wrap rather than clip; tables retain column meaning and scroll inside their region</td>
+</tr>
+</tbody></table></div>
+<p>Breakpoint custom properties in the token export document the media-query thresholds; CSS custom properties cannot be substituted directly into media queries. Keep implementation media queries in sync with the registry. Sticky navigation reserves scroll offset so anchored headings remain visible. No page-wide horizontal scrolling is intended. Table regions are intentional horizontal scroll containers with a name and keyboard focus; do not force every data table into unrelated mobile cards. At 200% text size or long translated content, let labels and descriptions wrap, retain critical data, and test actual implementations before release.</p>
+<h2 id="component-library">Component library</h2>
+<p>The following 27 families are the proposed initial library. C26 groups loading skeleton and progress as one loading family; C27 groups permission/freshness notices as one contextual-state pattern. They are reusable design contracts, not a published framework API. Names below are suggested API names; properties specify behavior for a future implementation.</p>
+<h3 id="shared-anatomy-and-state-contract">Shared anatomy and state contract</h3>
+<p>Controls use a native element where possible, a persistent visible name, an optional leading icon, and supporting text when needed. Buttons never communicate a state solely through color. Inputs have label → control → hint → error anatomy. Product data has value → unit/scope → source/freshness anatomy. Status and alert labels use words as well as color.</p>
+<p>For all <strong>interactive</strong> components: provide a visible hover treatment for pointer users; pressed feedback where applicable; the prescribed visible focus treatment; keyboard operation; and a disabled/reason treatment when the task supports unavailability. Focus never changes a value without an intentional action. Disabled controls do not receive events; read-only fields remain focusable and selectable. Do not replace a normal action label with an unexplained spinner.</p>
+<p>During an <strong>asynchronous action</strong>, retain the control width, expose busy state (<code>aria-busy</code> on the affected area), provide a visible progress phrase, prevent duplicate submission and keep the context. Announce completion or failure without moving focus unless a new focused task or blocking error requires it. Avoid indefinite skeletons: after an implementation-defined timeout, show a recoverable failure with the last known timestamp if data exists. The reference&#39;s spinner/skeleton are explicitly illustrative, not actual requests.</p>
+<p>For <strong>static components</strong>, hover, pressed, focus and disabled are inapplicable unless the component contains an explicit interactive element. Do not make an entire informational card or badge focusable. Loading, validation and selected states are inapplicable unless named below. Unknown or missing data never uses a numeric zero, blank cell or unexplained dash.</p>
+<h3 id="actions">Actions</h3>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>ID / API</th>
+<th>Use, anatomy and content</th>
+<th>Variants / sizing</th>
+<th>State and behavior</th>
+<th>Accessibility expectations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C01 <code>Button</code></td>
+<td>Perform a task. Label + optional decorative icon. Verb + object; aim for 1–3 short words, wrap on narrow screens if necessary</td>
+<td>Primary navy; accent orange/navy for a prominent brand CTA; outlined secondary; ghost; destructive red. 36/44/52px</td>
+<td>Default/hover/pressed/focus/disabled/loading; success/error delivered by feedback, not a permanently recolored button. One primary per task. Action does not navigate</td>
+<td>Native <code>button</code>, explicit type; Enter/Space; accessible name matches visible label; busy phrase and duplicate-submit prevention</td>
+</tr>
+<tr>
+<td>C02 <code>TextLink</code></td>
+<td>Navigate to a resource or location. Meaningful text + optional direction icon</td>
+<td>Default underlined dark orange; inverse white; inline 14/16px. Link style does not depend on hover</td>
+<td>Default/hover/focus/visited where useful. Disabled/loading/validation/selected are inapplicable; remove an unavailable destination or explain nearby</td>
+<td>Native anchor with real href; Enter activates; no empty/hash-only placeholder destinations</td>
+</tr>
+<tr>
+<td>C03 <code>IconButton</code></td>
+<td>A familiar repeated action with limited space. One icon; visible tooltip can clarify but does not replace accessible name</td>
+<td>Primary/secondary/ghost/destructive; default 44px target; icon 20px</td>
+<td>Same applicable states as Button. No unlabeled mystery actions; destructive operation opens confirmation</td>
+<td>Native button with <code>aria-label</code>; decorative SVG hidden; tooltip, if added in production, opens on keyboard focus and pointer hover and can be dismissed</td>
+</tr>
+</tbody></table></div>
+<h3 id="inputs-and-choices">Inputs and choices</h3>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>ID / API</th>
+<th>Use, anatomy and content</th>
+<th>Variants / sizing</th>
+<th>State and behavior</th>
+<th>Accessibility expectations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C04 <code>TextField</code></td>
+<td>Short single-line input. Visible label, control, hint, inline error. Placeholder is an example, never the label</td>
+<td>Default/error/read-only/disabled; 44px high, full available width. Example brand name max 80 characters</td>
+<td>Default/hover/focus/filled/invalid/disabled/read-only. Validate on submit; after error, correct as the person edits. Preserve values after failure. Loading lives at form level; selected is native text selection</td>
+<td>Native input with correct type/autocomplete, <code>required</code> as applicable; label <code>for</code>; hint/error IDs in <code>aria-describedby</code>; invalid sets <code>aria-invalid</code>; focus first invalid after submit</td>
+</tr>
+<tr>
+<td>C05 <code>Select</code></td>
+<td>One choice from a known list; label + native select + hint/error</td>
+<td>Native single select, 44px; avoid custom menu unless search/scale requires it</td>
+<td>Default/hover/focus/selected/invalid/disabled; async options show loading/error outside menu; preserve previous valid selection</td>
+<td>Native select and option elements; platform keyboard behavior; label tied to select; required/error association when applicable</td>
+</tr>
+<tr>
+<td>C06 <code>TextArea</code></td>
+<td>Multiline context. Visible label, optional qualifier, field, helper</td>
+<td>Default/error/read-only/disabled; min 90px, vertical resize. Example max 240 characters</td>
+<td>C04 states; selected text is native. Never truncate typed content. Add a count when near a strict limit, not a false progress metric</td>
+<td>Native textarea; associated label/hint/error; keyboard Tab exits normally; preserve line breaks</td>
+</tr>
+<tr>
+<td>C07 <code>Checkbox</code></td>
+<td>Independent or multiple choices. Box + clickable label; optional help</td>
+<td>Default/checked/mixed/error/disabled. 18px visual inside minimum 32px labelled row</td>
+<td>Default/hover/focus/checked/mixed/disabled; group validation if at least one is required. No loading state unless whole group is busy. Reference uses native checked state; mixed is documented for implementation</td>
+<td>Native checkbox and label; Space toggles; indeterminate state requires property and accessible mixed state; fieldset/legend for a related group</td>
+</tr>
+<tr>
+<td>C08 <code>RadioGroup</code></td>
+<td>One mutually exclusive choice; legend + options + hint/error</td>
+<td>Vertical default, horizontal only for short choices; 18px visual inside 32px label row</td>
+<td>Default/hover/focus/selected/invalid/disabled. Selection doesn&#39;t submit the surrounding form. Loading inapplicable to static choices</td>
+<td>Native same-name radios in fieldset with legend; Arrow keys choose, Space selects; include visible group error and description</td>
+</tr>
+<tr>
+<td>C09 <code>Switch</code></td>
+<td>Immediately enable/disable a simple setting; binary state + persistent label</td>
+<td>40×24px track in 44px row; off gray/on navy; optional state description</td>
+<td>Default/hover/focus/on/off/disabled; error restores prior state and explains failure. Selected means on. Loading only for remote persistence; demo toggles local state and announces it</td>
+<td>Checkbox with <code>role=&quot;switch&quot;</code>; Space toggles; accessible name remains stable, checked conveys state. Never use for choosing a pending form option</td>
+</tr>
+<tr>
+<td>C10 <code>SearchField</code></td>
+<td>Find content in a stated scope; visible label or accessible name, query, optional search icon/results status</td>
+<td>Component index uses Enter; listing search filters on input. 44px; clear via native search behavior or explicit clear action</td>
+<td>Default/hover/focus/filled/no-results; async loading/error only when wired to source. No selected/disabled unless source/task unavailable. Keep query after empty results</td>
+<td>Native search input; label names scope; result count uses polite status; typing does not move focus; Enter search may move to matched section heading in this guide</td>
+</tr>
+</tbody></table></div>
+<h3 id="navigation">Navigation</h3>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>ID / API</th>
+<th>Use, anatomy and content</th>
+<th>Variants / sizing</th>
+<th>State and behavior</th>
+<th>Accessibility expectations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C11 <code>NavigationShell</code></td>
+<td>Orient a product or reference. Header, identity, section links, current marker</td>
+<td>Wide rail; narrow horizontal strip. Gallery link targets ≥40px high, default actions 44px</td>
+<td>Default/hover/focus/current; current uses both background and orange marker. Loading/validation inapplicable; permissions can omit inaccessible destinations with context when necessary</td>
+<td>Named nav landmarks, skip link, real anchors, <code>aria-current=&quot;location&quot;</code>; DOM order: skip → header → rail → main; no focus traps</td>
+</tr>
+<tr>
+<td>C12 <code>Breadcrumb</code></td>
+<td>Show hierarchy above a detail surface. Ancestor links + separators + current label</td>
+<td>12px, wrapping row, generous link spacing. Keep useful ancestors; do not ellipsize critical context</td>
+<td>Links default/hover/focus; current is text, not another duplicate link. Loading/disabled/validation inapplicable</td>
+<td>Named breadcrumb nav; current <code>aria-current=&quot;page&quot;</code>; visual separators hidden; link text meaningful</td>
+</tr>
+<tr>
+<td>C13 <code>Tabs</code></td>
+<td>Switch among related, mutually exclusive views at one level. Tablist, tab buttons, panel</td>
+<td>Underlined tabs; 44px minimum tab height; wrap or local scroll if many</td>
+<td>Default/hover/focus/selected/disabled if documented; selected has orange underline and navy text. Automatic activation for instant local panels; loading/error/empty belong inside panel</td>
+<td><code>tablist</code>/<code>tab</code>/<code>tabpanel</code>; IDs connect tab to panel; roving tabindex; Left/Right, Home/End; Tab enters active panel; preserve logical focus</td>
+</tr>
+<tr>
+<td>C14 <code>Stepper</code></td>
+<td>Inform about a bounded sequence. Ordered steps, numbers/completion text, current</td>
+<td>Horizontal for 3 short steps; vertical for long labels. Gallery is informational</td>
+<td>Upcoming/current/complete/error if actual task failed; hover/focus/disabled/loading/selected inapplicable to informational steps. Do not invent percent complete</td>
+<td>Ordered list with <code>aria-current=&quot;step&quot;</code>; completion stated in accessible text. If navigation is supported later, use explicit links and preserve data</td>
+</tr>
+<tr>
+<td>C15 <code>Pagination</code></td>
+<td>Move through a known paginated result set. Previous, page buttons, next, result summary</td>
+<td>36px compact page controls; current navy; visible range; ellipsis for long lists with a direct route</td>
+<td>Default/hover/focus/current/boundary-disabled/loading. Reset to first page after a filter changes scope. Reference only changes local page number/range; no real dataset is fetched</td>
+<td>Named nav; page accessible names; <code>aria-current=&quot;page&quot;</code>; boundary buttons disabled; announce result range; actual implementations keep focus on the activation control</td>
+</tr>
+</tbody></table></div>
+<h3 id="data-and-status">Data and status</h3>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>ID / API</th>
+<th>Use, anatomy and content</th>
+<th>Variants / sizing</th>
+<th>State and behavior</th>
+<th>Accessibility expectations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C16 <code>StatusBadge</code></td>
+<td>Short categorical state. Label + optional decorative dot</td>
+<td>Neutral/info/success/warning/danger; 11px UI, 4×9px padding. Prefer 1–3 words</td>
+<td>Static semantic states. Hover/focus/pressed/disabled/loading/validation/selection inapplicable. Do not imply clickability</td>
+<td>Text names status; color is supplementary; never put interactive controls inside a badge</td>
+</tr>
+<tr>
+<td>C17 <code>Avatar</code></td>
+<td>Identify a person beside a name; image or initials</td>
+<td>36px default, initials fallback; proposed larger 44px. Group with accompanying names if needed</td>
+<td>Image/initials/fallback; hover/focus/disabled/validation/selection/loading inapplicable unless an explicit profile link wraps it</td>
+<td>Visible text identifies the person; accessible name or decorative treatment when adjacent name duplicates it; initials do not communicate a role/permission</td>
+</tr>
+<tr>
+<td>C18 <code>Card</code></td>
+<td>Group one coherent object or task. Heading, context, optional status, one explicit action</td>
+<td>Default outlined 12px radius; feature panel 24px; padding 24px</td>
+<td>Static default; loading/error/empty belong to its content. Container hover/focus/disabled/selected inapplicable; nested action has its own states</td>
+<td>Semantic article/section where appropriate; heading level fits page; explicit link/button rather than click handler on whole card; preserve reading order</td>
+</tr>
+<tr>
+<td>C19 <code>Metric</code></td>
+<td>Communicate one value with context. Label, value/unit, source, timestamp, comparison if valid</td>
+<td>Standard 36px value; compact 27px; missing state uses readable phrase</td>
+<td>Known positive/negative/zero; unavailable; stale; loading/error via content. Hover/focus/disabled/validation/selected inapplicable. Comparisons must state period/baseline; no invented positive change</td>
+<td>Text/units readable in source order; tabular numbers; trends use words/symbols with explanation, not color alone. Data must not be supplied solely by a chart</td>
+</tr>
+<tr>
+<td>C20 <code>DataTable</code></td>
+<td>Compare items across stable attributes. Caption, header row, body rows, optional row action</td>
+<td>Standard 16px cells; compact 12px only when target sizes survive; numeric right alignment. Local horizontal scroll on narrow screens</td>
+<td>Loaded/empty/loading/error/stale/permission. Optional sort/row selection only when explicitly implemented; current reference has neither. Row hover can aid tracking without implying whole-row action</td>
+<td>Native table, caption, scope=col, appropriate row header where needed; named focusable scroll region; unique accessible row-action names; never use table role for unrelated layout</td>
+</tr>
+</tbody></table></div>
+<h3 id="feedback-and-recovery">Feedback and recovery</h3>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>ID / API</th>
+<th>Use, anatomy and content</th>
+<th>Variants / sizing</th>
+<th>State and behavior</th>
+<th>Accessibility expectations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C21 <code>Alert</code></td>
+<td>A persistent issue, warning or result that affects current task. Symbol, title, explanation, optional action</td>
+<td>Info/success/warning/danger, 16px padding, leading status line</td>
+<td>Default informational; loading/retry/success/failure as task states. Container hover/focus/selected/disabled/validation inapplicable; nested action owns these. Keep failure until resolved/dismissed appropriately</td>
+<td>Static examples aren&#39;t announced on page load. Newly injected urgent failure may use alert; normal updates use status. Role choice follows urgency; actionable text is keyboard reachable</td>
+</tr>
+<tr>
+<td>C22 <code>Toast</code></td>
+<td>Supplementary confirmation after an explicit action. Short title, one sentence, close</td>
+<td>Navy inverse; max 400px; viewport inset 16–24px; persistent until dismissed in reference</td>
+<td>Shown/hidden; close hover/focus. No loading/selected/validation/disabled state for container. Don&#39;t rely on toast for an unresolved error or important content that must remain discoverable</td>
+<td>Polite atomic status; do not steal focus; close has name and visible focus. On explicit dismissal restore focus to valid trigger if dismissal held focus. No auto-dismiss timer in reference</td>
+</tr>
+<tr>
+<td>C23 <code>Dialog</code></td>
+<td>Focus one review or consequential decision. Context, title, explanation, summary, cancel, explicit action</td>
+<td>Standard 480px max, viewport minus32px; review or destructive confirmation; 24–32px padding</td>
+<td>Closed/open/busy/error/success. Hover/focus/disabled apply to controls, not shell. Cancel/Escape preserve data. Destructive opens with safest action focused, states consequence, never uses a vague “Yes”</td>
+<td>Native <code>dialog.showModal()</code>, labelled/described; background inert while open; Tab stays in modal; Escape closes; close restores opener; production long dialogs keep heading and actions reachable</td>
+</tr>
+<tr>
+<td>C24 <code>Accordion</code></td>
+<td>Optional explanatory content; visible question + disclosure + answer</td>
+<td>Native details, 16–18px padding; multiple open sections allowed</td>
+<td>Collapsed/expanded, summary hover/focus. Loading/validation/disabled/selected inapplicable; do not hide required errors or the only main CTA inside it</td>
+<td>Native details/summary; Enter/Space; full question is clickable; document outline remains coherent; essential task instructions remain visible</td>
+</tr>
+<tr>
+<td>C25 <code>EmptyState</code></td>
+<td>Explain no objects or no results. Title, reason/scope, meaningful recovery</td>
+<td>Inline/table/card; icon optional; 24px padding</td>
+<td>First-use/no-results/cleared; loading/error/permission are separate meanings, not empty aliases. Container hover/focus/disabled/selected/validation inapplicable</td>
+<td>Text conveys state, decorative illustration hidden, action native and named; empty query results do not imply objects were deleted</td>
+</tr>
+<tr>
+<td>C26 <code>LoadingState</code></td>
+<td>Convey a known wait without changing layout. Skeleton + visible loading phrase, or progress label + value</td>
+<td>Static skeleton for content shape; indeterminate spinner for action; determinate progress only if denominator known</td>
+<td>Indeterminate/determinate/complete/error via surrounding feedback. Hover/focus/disabled/selected/validation inapplicable to indicator. Demo progress60% is static synthetic, not a running import</td>
+<td>Real loading region uses <code>aria-busy</code>; visible phrase; avoid noisy repeated announcements. Native progress with label/value; skeleton decorative. Reduced motion turns off spinning/shimmer</td>
+</tr>
+<tr>
+<td>C27 <code>ContextNotice</code></td>
+<td>Prevent incorrect action caused by access or source quality. State, capability/freshness, next step</td>
+<td>Permission uses info; stale uses warning; inherited 16px alert anatomy</td>
+<td>Restricted/stale/disconnected/current; loading/error via source state. Container hover/focus/disabled/selected/validation inapplicable; action only when a real route is provided</td>
+<td>Explain capability in words; do not expose restricted values. Timestamp includes date/timezone; human guidance is not a connected access request. Production needs agreed role rules/freshness thresholds</td>
+</tr>
+</tbody></table></div>
+<h2 id="flows-screens-and-interaction-details">Flows, screens and interaction details</h2>
+<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>
+<thead>
+<tr>
+<th>Screen ID</th>
+<th>Actual file and stable anchor</th>
+<th>Relevant states</th>
+<th>Requirement coverage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DS00</td>
+<td><a href="index.html#overview">Overview</a></td>
+<td>Proposal provenance, synthetic-data notice, compact brand expression</td>
+<td>R1, R2, R6, R9</td>
+</tr>
+<tr>
+<td>DS01</td>
+<td><a href="index.html#language">Brand language</a></td>
+<td>Voice examples, current logo and network fallback, imagery/icon rules</td>
+<td>R1, R2</td>
+</tr>
+<tr>
+<td>DS02</td>
+<td><a href="index.html#foundations">Foundations</a></td>
+<td>Palette, contrast warning, type/rhythm, token links</td>
+<td>R1, R3, R8</td>
+</tr>
+<tr>
+<td>DS03</td>
+<td><a href="index.html#actions">Actions</a></td>
+<td>Default, hover/focus, disabled, loading illustration, feedback, destructive confirmation</td>
+<td>R4, R5, R8, R9</td>
+</tr>
+<tr>
+<td>DS04</td>
+<td><a href="index.html#inputs">Inputs and choices</a></td>
+<td>Empty/filled/invalid/valid, read-only/disabled, checked/radio/on-off, component search</td>
+<td>R4, R5, R8, R9</td>
+</tr>
+<tr>
+<td>DS05</td>
+<td><a href="index.html#navigation">Navigation</a></td>
+<td>Current/complete/upcoming, tabs selected, page boundaries</td>
+<td>R4, R5, R7, R8, R9</td>
+</tr>
+<tr>
+<td>DS06</td>
+<td><a href="index.html#data">Data/status</a></td>
+<td>Known zero, missing, stale, semantic statuses, action card</td>
+<td>R4, R5, R8</td>
+</tr>
+<tr>
+<td>DS07</td>
+<td><a href="index.html#feedback">Feedback</a></td>
+<td>Error/retry, success, toast, native dialog, accordion, empty, illustrative loading/progress, permission</td>
+<td>R4, R5, R8, R9</td>
+</tr>
+<tr>
+<td>DS08</td>
+<td><a href="index.html#composition">Synthetic workspace</a></td>
+<td>Search/filter, no matches/clear, row detail, review/save/cancel, activity, freshness, draft permission</td>
+<td>R5, R6, R7, R8, R9</td>
+</tr>
+<tr>
+<td>DS09</td>
+<td><a href="index.html#adoption">Adoption</a></td>
+<td>Use/adopt/version guidance, production gates, local file links</td>
+<td>R9, R10</td>
+</tr>
+</tbody></table></div>
+<h3 id="find-a-rule-and-inspect-a-component">Find a rule and inspect a component</h3>
+<p>Overview → brand language → foundations → relevant component section → composed example → adoption. The rail links use real anchors and current position; native browser navigation remains available. Component search accepts a component name and Enter, jumps to the relevant section and focuses its heading; a no-match message preserves the query. Input typing never triggers an unexpected jump.</p>
+<h3 id="complete-a-synthetic-business-task">Complete a synthetic business task</h3>
+<ol>
+<li>Open the workspace. Read freshness and permission notices before reviewing data.</li>
+<li>Select “Needs review” or type a listing name. Matching rows and an announced result count update locally; the query and filter can be combined.</li>
+<li>If no row matches, show an explicit empty state. “Clear filters” resets both query and status and returns focus to search.</li>
+<li>Review the “Everyday carry bag” change from its row or the screen&#39;s “Review 3 changes” action. The native dialog describes the synthetic change and includes cancellation.</li>
+<li>Cancel or Escape closes without effect. Save demo draft closes the dialog, restores focus to its opener and announces a local confirmation. Nothing publishes or changes a system.</li>
+<li>The Activity tab demonstrates related historical context, not a live audit feed. View actions on the cup and lamp rows open a context-specific, read-only detail dialog with stock, status and source freshness. The save action is absent because no edit is proposed for those rows. Zero stock is explicit; the unrelated return-rate metric is missing, not zero.</li>
+</ol>
+<p>The reference intentionally models a single simple task rather than introducing a full marketplace permission, publishing, sync or approval engine. The bulk review dialog summarizes three sample changes and shows one example in detail; the bag row opens its single proposed title change. Cup/lamp row views show only their matching listing context. This is not a full change-diff experience.</p>
+<h3 id="form-pagination-and-destructive-examples">Form, pagination and destructive examples</h3>
+<p>Submitting the brand form with a blank/whitespace name shows a field-specific error, preserves the selected market and focuses the invalid name. Filling a name clears its error; submission confirms a local example. Values are not stored, sent or restored after reload. The select, textarea, checkbox, radio and switch use native inputs and can be changed locally. “Demo notifications” changes only its label/state message.</p>
+<p>The pagination example changes a local page number and visible item range, with previous/next disabled at boundaries. It does not paginate the three workspace rows; those belong to the separate live-filter example. The “Discard demo draft” action opens a separate native dialog with Keep draft focused by default. Confirmation announces that the example completed and no real draft was removed.</p>
+<h3 id="demo-extent-and-network-dependency">Demo extent and network dependency</h3>
+<p>All buttons either operate local state, open/close a local dialog or produce an explicitly synthetic explanation. The loading skeleton, 60% progress, stepper and static status notices are labelled illustrations. The guide has no storage, tracking, fetch/XHR or network writes. The real external destination is opptra.com; local document/token links open files in the package.</p>
+<p>The current official SVG is referenced remotely. Asset download was not available under the active browser policy, so no local copy or extracted inline version is included. The guide shows a text wordmark when the image errors. Google Fonts is a remote stylesheet; Georgia/Segoe UI/system fonts provide fallback. Both dependencies need licensed distribution and availability decisions before production deployment. A blocked network can change the exact typography/logo rendering, while the content and local interactions remain usable.</p>
+<h2 id="accessibility-and-validation-limits">Accessibility and validation limits</h2>
+<p>Design target: <a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2 AA</a>. Relevant expectations include text/non-text contrast, keyboard operation, visible/unobscured focus, labelled controls and descriptive errors, status announcements, meaningful sequence, reflow and minimum targets. Reference controls generally use 44px default height, with 36px compact actions; <a href="https://www.w3.org/TR/WCAG22/#target-size-minimum">SC2.5.8</a> sets a 24×24 CSS-pixel AA minimum with exceptions. Do not mislabel the 44px enhanced target as an AA minimum.</p>
+<p>Focus order follows the visible DOM: header and section nav, then page content, form controls and explicit actions. A skip link bypasses repeated navigation. Tabs use roving tabindex and Arrow/Home/End keys; panels are labelled and focusable. Native dialogs provide modality with labelled titles, Escape cancellation and opener restoration. Native selects, radios, checkboxes and disclosures retain platform semantics. Errors associate with the field and use specific correction text. Toast and result-count updates use polite status; static examples avoid assertive announcements during initial page load.</p>
+<p>Recommended color pairs were measured numerically by the coordinator; actual final checks, browser dimensions and outcomes belong in <a href="validation.html">validation.md</a>. The reference intentionally does not claim screen-reader testing, user testing, a physical-device check, production behavior, complete conformance or implementation feasibility. CSS focus intent is not proof that every host application, embedded container or browser will preserve it. Production review must cover disabled/busy announcements, zoom/reflow, high contrast, font fallback, live permissions/data, keyboard focus after asynchronous updates and screen readers in supported browser/OS combinations.</p>
+<h2 id="adoption-ownership-and-versioning">Adoption, ownership and versioning</h2>
+<p>Proposed steward model: Opptra appoints a design owner for identity/components and an engineering maintainer for implementation. Product/domain owners supply task needs, permissions, data definitions and acceptance criteria. These are proposed responsibilities, not assigned commitments.</p>
+<p>Apply the system in this order: understand the task → use the existing pattern → reference semantic tokens → specify applicable states → inspect a full composition → validate in the target product. Begin with one real form/table workflow and one marketing section; review actual content and user needs before wider migration.</p>
+<p>Use stable component IDs and names; prefer capability-neutral names such as Button, TextField and StatusBadge over a page-specific name. Add a new component only when an existing component cannot meet a demonstrated need without confusing behavior. An addition request should include the task, evidence, related component, proposed API/states, content, responsive behavior, accessibility expectations and an actual composition. The steward records the decision and why reuse was insufficient.</p>
+<p>Reference release <strong>0.1.0</strong> means the first proposed package. This is distinct from durable PRD/design artifact version1 used for content-bound review. Adopt semantic versioning for a future library: patch for a correction that preserves the contract; minor for a compatible component/token addition; major for removal/rename or changed behavior that requires product migration. During 0.x, record every breaking change explicitly and avoid silent renames. Each release records changed tokens/components, source decision, migration before/after, affected products and validation limits.</p>
+<p>First-adoption checklist:</p>
+<ul>
+<li>Confirm stakeholder brand approval, product scope, system owners and the live-logo authority.</li>
+<li>Agree font license/distribution and supported browser/OS combinations.</li>
+<li>Build native, tested component implementations in the chosen framework; do not ship this gallery as a production package.</li>
+<li>Validate real data definitions, permissions, async behavior, empty/error recovery and content with domain owners.</li>
+<li>Review desktop/narrow/zoom layouts, keyboard behavior and supported assistive technology; document actual findings.</li>
+<li>Migrate incrementally with token aliases and deprecation notices where an old contract already exists.</li>
+</ul>
+<h2 id="alternatives-considered-and-remaining-questions">Alternatives considered and remaining questions</h2>
+<p>Copying the public site literally would preserve familiar visual traits but does not supply business-product states and would repeat unsafe ordinary-size white/orange contrast. An unrelated dashboard kit would provide dense controls while losing Opptra&#39;s type and expressive spacing. The chosen approach retains the website vocabulary and reconciles it with established navy product structure, then labels the operational patterns as proposals.</p>
+<p>Light mode, English copy, marketing plus business-product use and desktop-first business density are accepted working assumptions for this bounded handoff. Confirm the first product to adopt, framework, real-user task priorities, final steward, supported browsers, font distribution and future dark/multilingual needs before production work. No user research, adoption benefit or system-wide migration commitment is inferred.</p>
+</article><p class="notice"><a href="guidelines.md">Read the Markdown source</a> · <a href="SKILL.md">Agent instructions</a></p></main><footer>Opptra design language · Proposed reference 0.1.0 · Synthetic demonstrations</footer></body></html>

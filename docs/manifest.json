@@ -1,0 +1,31 @@
+{
+  "version": "0.1.0",
+  "status": "proposed-reference",
+  "published_files": {
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "SKILL.md": "4fc6189b82ecbb4b6e545c4abd0261b7bcfe50e529c264b31669d00e718ca5b6",
+    "evidence/contrast.json": "5dab07aa064ddbb730badb602d1f6946f2942ea61cb480ea100895fd90e07e32",
+    "evidence/token-parity.json": "bd90dca8377a314de3ad65cec505518c1e1e7919a40967d640bf143ff75031e7",
+    "gallery.css": "c192fc2948812f05b38215aef6ab7306ac9388bc4f4a2d849ed3b9e8ce0fa04e",
+    "gallery.js": "e8aeadf38f3cb0b171e56c84134934d8b219a218be9c83c0860071a1bc174185",
+    "guidelines.html": "133c832da8de34070d16c0e77c300c53b1df03fd98a3a698bb1898b7bf8916e5",
+    "guidelines.md": "98ff822fe72de1b17e0d2af5dea642986484295340df91b15806af2455e7f9f5",
+    "index.html": "06a680ce061d642246c0fbe557cc80740235c9c4e2c88b7d5f45a4f58dd4fcf1",
+    "site.css": "e5bd49951c6c6789f3ec130cee16da76a1687d3a5c58a185c017bf004ecf4d48",
+    "source-audit.html": "0f45476c12ff5b949d21068aeb2e45da458cc11cacaef5550ae49aa19b18269c",
+    "source-audit.md": "27c6e6eef4fd7ac1a7aa0d44425de1b2fc8db6869ac03e9d7a65d21f27517283",
+    "tokens.css": "de02cf61c4ef957f45f4f3bc6b8f14f7086cbf4e8a01db0dbceec1e7920903e9",
+    "tokens.json": "417c80bfcab052c35bb3b5aa77dcb310df3ee526642e19f4e6046ba878181fb8",
+    "use.html": "fe82d2b90bc4e551dc0f9696dc155e4caa5f9c9640e2cd4154319a99731828f3",
+    "use.md": "b4810f4d0125fb02e61d4a866622616ee0eb85145bf20a42cc4b2a69bde0da35",
+    "validation.html": "e7a31039effc0316bbc5ff9a7f655c4ecc53ba9a6ca5fec29b71c671a188b8ef",
+    "validation.md": "ddd8f7ec8773accf562d897a4de7862cc1beba90ca433e0796de8d13b0cf9cc7"
+  },
+  "resources": {
+    "gallery": "index.html",
+    "guidelines": "guidelines.md",
+    "skill": "SKILL.md",
+    "css_tokens": "tokens.css",
+    "json_tokens": "tokens.json"
+  }
+}
