@@ -1,0 +1,21 @@
+{
+  "viewport": 390,
+  "pageClient": 390,
+  "pageScroll": 390,
+  "bodyScroll": 390,
+  "overflowing": [],
+  "tables": [
+    {
+      "label": "Sample channel table, scroll horizontally if needed",
+      "client": 301,
+      "scroll": 557,
+      "overflow": "auto"
+    },
+    {
+      "label": "Sample listing results, scroll horizontally if needed",
+      "client": 309,
+      "scroll": 617,
+      "overflow": "auto"
+    }
+  ]
+}

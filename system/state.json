@@ -1,0 +1,459 @@
+{
+  "schema_version": 1,
+  "feature_id": "opptra-design-system",
+  "title": "Opptra brand language and component library",
+  "stage": "signed_off",
+  "review_round": 1,
+  "review_budget": 3,
+  "artifacts": {
+    "prd": {
+      "path": "prd.md",
+      "version": 1
+    },
+    "design": {
+      "path": "design.md",
+      "version": 1
+    },
+    "source_audit": {
+      "path": "source-audit.md",
+      "version": 1
+    },
+    "validation": {
+      "path": "validation.md",
+      "version": 1
+    },
+    "readme": {
+      "path": "README.md",
+      "version": 1
+    },
+    "evidence_desktop_overview_png": {
+      "path": "evidence/desktop-overview.png",
+      "version": 1
+    },
+    "evidence_desktop_workspace_png": {
+      "path": "evidence/desktop-workspace.png",
+      "version": 1
+    },
+    "evidence_mobile_overview_png": {
+      "path": "evidence/mobile-overview.png",
+      "version": 1
+    },
+    "evidence_mobile_workspace_png": {
+      "path": "evidence/mobile-workspace.png",
+      "version": 1
+    },
+    "evidence_token_parity_json": {
+      "path": "evidence/token-parity.json",
+      "version": 1
+    },
+    "evidence_mobile_metrics_json": {
+      "path": "evidence/mobile-metrics.json",
+      "version": 1
+    },
+    "evidence_contrast_json": {
+      "path": "evidence/contrast.json",
+      "version": 1
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "reference": "User instruction in current Codex chat, 2026-11-02",
+      "kind": "stakeholder",
+      "summary": "Define a clear brand language and component library for Opptra from opptra.com. Local design handoff scope."
+    },
+    {
+      "id": "S2",
+      "reference": "https://www.opptra.com/",
+      "kind": "research",
+      "summary": "Live homepage inspected 2026-11-02. Editorial eCommerce operator positioning, generous whitespace, rounded imagery and pill CTAs. Website claims are not independently verified."
+    },
+    {
+      "id": "S3",
+      "reference": "https://cdn.prod.website-files.com/6933cd7135f6e590ffef0761/css/opptra---dev.webflow.shared.84794a841.css",
+      "kind": "research",
+      "summary": "Live DOM computed styles inspected 2026-11-02 at 1280px: Spectral headings, Raleway UI, #FF5800 orange, #FFFCE8 soft yellow, #22221F text. Live logo URL recorded in brief. Current white/orange CTA treatment is observed, not endorsed."
+    },
+    {
+      "id": "S4",
+      "reference": "/Users/vijaybabu/.codex/skills/opptra-branding/SKILL.md",
+      "kind": "document",
+      "summary": "Existing Opptra guidance read 2026-11-02: #131A48 navy structure, #FF5800 accent, #FFFCE8 tint; Spectral headings and Raleway body/UI. Reconciled with current website in decision D2."
+    },
+    {
+      "id": "S5",
+      "reference": "https://www.w3.org/TR/WCAG22/",
+      "kind": "document",
+      "summary": "Current W3C standard verified 2026-11-02, used for design expectations. Targeted reference checks do not establish full accessibility conformance."
+    },
+    {
+      "id": "S6",
+      "reference": "wireframes/index.html",
+      "kind": "assumption",
+      "summary": "Proposed reference gallery and synthetic brand-workspace examples created for this handoff; no live application data, connected actions or user-research evidence."
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R1",
+      "statement": "Define sourced visual identity, logo/imagery/icon rules and marketing/product applications.",
+      "acceptance_criteria": [
+        "Separate live observations, existing guidance and proposed extensions, including current logo provenance and navy reconciliation.",
+        "Retain Spectral/Raleway and identifiable brand colors without presenting invented logo variants or unverified claims as approved."
+      ],
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "screen_ids": [
+        "DS00",
+        "DS01",
+        "DS02"
+      ]
+    },
+    {
+      "id": "R2",
+      "statement": "Define personality, voice, message hierarchy and practical marketing/product copy.",
+      "acceptance_criteria": [
+        "Include marketing headline/body/CTA and product label, empty, error, success and permission examples.",
+        "Label synthetic examples and avoid unsupported performance claims."
+      ],
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "screen_ids": [
+        "DS00",
+        "DS01"
+      ]
+    },
+    {
+      "id": "R3",
+      "statement": "Provide semantic foundations exported consistently as CSS and JSON.",
+      "acceptance_criteria": [
+        "Cover color, typography, spacing, grid, radius, elevation, motion and focus with matching CSS/JSON names and values.",
+        "Identify original brand colors and proposed semantic colors, with explicit contrast-safe orange guidance."
+      ],
+      "source_ids": [
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "screen_ids": [
+        "DS02"
+      ]
+    },
+    {
+      "id": "R4",
+      "statement": "Document the core component families with reference examples and usage contracts.",
+      "acceptance_criteria": [
+        "Cover actions/links; input/select/checkbox/radio/switch; badge/status/alert/toast/card; table/tabs/pagination; dialog/navigation.",
+        "For each family, specify usage, applicable variants/sizes, anatomy, content, states, behavior and accessibility notes."
+      ],
+      "source_ids": [
+        "S1",
+        "S4",
+        "S5"
+      ],
+      "screen_ids": [
+        "DS03",
+        "DS04",
+        "DS05",
+        "DS06",
+        "DS07"
+      ]
+    },
+    {
+      "id": "R5",
+      "statement": "Specify applicable interaction, validation and business feedback/permission states.",
+      "acceptance_criteria": [
+        "Cover default, hover, focus, disabled, loading, selected and validation states, explicitly identifying inapplicable cases.",
+        "Cover empty/loading/error/success/restricted business states, clear destructive confirmation and honest simulated actions."
+      ],
+      "source_ids": [
+        "S1",
+        "S5"
+      ],
+      "screen_ids": [
+        "DS03",
+        "DS04",
+        "DS05",
+        "DS06",
+        "DS07",
+        "DS08"
+      ]
+    },
+    {
+      "id": "R6",
+      "statement": "Compose a synthetic business task and compact marketing expression with traceability.",
+      "acceptance_criteria": [
+        "Business composition includes navigation, search/filtering, a data table, a detail/action surface and feedback using documented components/tokens.",
+        "Label synthetic values/actions and map stable screen or section IDs to all requirements."
+      ],
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "screen_ids": [
+        "DS00",
+        "DS08"
+      ]
+    },
+    {
+      "id": "R7",
+      "statement": "Define and verify wide/narrow responsive behavior for core layouts.",
+      "acceptance_criteria": [
+        "Define responsive gallery, navigation, form, overlay and table behavior.",
+        "Inspect 1280px desktop and 390px mobile references; prevent obscuring page-wide overflow and document contained table scrolling."
+      ],
+      "source_ids": [
+        "S1",
+        "S5"
+      ],
+      "screen_ids": [
+        "DS05",
+        "DS08"
+      ]
+    },
+    {
+      "id": "R8",
+      "statement": "Document WCAG 2.2 AA design expectations and evidence limits.",
+      "acceptance_criteria": [
+        "Specify keyboard order, focus, names/labels, validation, status announcements, contrast, non-color cues, target-size and reflow decisions.",
+        "Record actual contrast and keyboard/reference checks with limits; do not claim blanket accessibility conformance."
+      ],
+      "source_ids": [
+        "S5"
+      ],
+      "screen_ids": [
+        "DS02",
+        "DS03",
+        "DS04",
+        "DS05",
+        "DS06",
+        "DS07",
+        "DS08"
+      ]
+    },
+    {
+      "id": "R9",
+      "statement": "Deliver an inspectable reference with honest demo behavior and usable asset fallbacks.",
+      "acceptance_criteria": [
+        "Provide gallery navigation, component/state index, included file paths and documented validation evidence.",
+        "Included links/controls behave to the stated demo extent, inert/illustrative/simulated elements are distinguished, and network assets have usable fallbacks."
+      ],
+      "source_ids": [
+        "S1"
+      ],
+      "screen_ids": [
+        "DS00",
+        "DS03",
+        "DS04",
+        "DS05",
+        "DS07",
+        "DS08",
+        "DS09"
+      ]
+    },
+    {
+      "id": "R10",
+      "statement": "Define adoption, contribution, ownership and versioning guidance.",
+      "acceptance_criteria": [
+        "Include proposed ownership, stable naming, component selection/addition, semantic version/change-log and migration guidance with a first-adoption checklist.",
+        "Keep proposal status, unvalidated implementation and adoption assumptions explicit without inventing measured benefits."
+      ],
+      "source_ids": [
+        "S1",
+        "S4"
+      ],
+      "screen_ids": [
+        "DS09"
+      ]
+    }
+  ],
+  "screens": [
+    {
+      "id": "DS00",
+      "path": "wireframes/index.html",
+      "anchor": "overview",
+      "states": [
+        "proposal-provenance",
+        "synthetic-disclosure",
+        "marketing-example"
+      ]
+    },
+    {
+      "id": "DS01",
+      "path": "wireframes/index.html",
+      "anchor": "language",
+      "states": [
+        "voice-examples",
+        "logo-network-fallback",
+        "imagery-icon-guidance"
+      ]
+    },
+    {
+      "id": "DS02",
+      "path": "wireframes/index.html",
+      "anchor": "foundations",
+      "states": [
+        "palette",
+        "contrast-warning",
+        "type",
+        "spacing",
+        "token-exports"
+      ]
+    },
+    {
+      "id": "DS03",
+      "path": "wireframes/index.html",
+      "anchor": "actions",
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "busy-illustration",
+        "destructive-confirmation"
+      ]
+    },
+    {
+      "id": "DS04",
+      "path": "wireframes/index.html",
+      "anchor": "inputs",
+      "states": [
+        "default",
+        "filled",
+        "invalid",
+        "valid",
+        "read-only",
+        "disabled",
+        "checked",
+        "selected",
+        "on",
+        "off",
+        "search-match",
+        "search-no-match"
+      ]
+    },
+    {
+      "id": "DS05",
+      "path": "wireframes/index.html",
+      "anchor": "navigation",
+      "states": [
+        "current",
+        "complete",
+        "upcoming",
+        "tab-selected",
+        "pagination-boundaries"
+      ]
+    },
+    {
+      "id": "DS06",
+      "path": "wireframes/index.html",
+      "anchor": "data",
+      "states": [
+        "known-zero",
+        "missing",
+        "stale",
+        "status",
+        "detail-action"
+      ]
+    },
+    {
+      "id": "DS07",
+      "path": "wireframes/index.html",
+      "anchor": "feedback",
+      "states": [
+        "error",
+        "retry",
+        "success",
+        "toast",
+        "dialog",
+        "expanded",
+        "collapsed",
+        "empty",
+        "illustrative-loading",
+        "determinate-progress",
+        "permission"
+      ]
+    },
+    {
+      "id": "DS08",
+      "path": "wireframes/index.html",
+      "anchor": "composition",
+      "states": [
+        "search",
+        "status-filter",
+        "no-results",
+        "clear-filters",
+        "row-specific-detail",
+        "review",
+        "save-demo",
+        "cancel",
+        "activity",
+        "stale",
+        "known-zero",
+        "missing",
+        "restricted-publish"
+      ]
+    },
+    {
+      "id": "DS09",
+      "path": "wireframes/index.html",
+      "anchor": "adoption",
+      "states": [
+        "adoption",
+        "ownership-proposal",
+        "versioning",
+        "migration",
+        "network-dependencies"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "question": "Which production framework and repository should consume the reference?",
+      "owner": "Vijay",
+      "blocking": false,
+      "status": "open",
+      "resolution": ""
+    },
+    {
+      "id": "Q2",
+      "question": "Who will own stakeholder approval and ongoing system releases?",
+      "owner": "Vijay",
+      "blocking": false,
+      "status": "open",
+      "resolution": ""
+    }
+  ],
+  "blockers": [],
+  "signoffs": {
+    "pm": {
+      "reviewer": "product_manager",
+      "decision": "accept",
+      "recorded_at": "2026-11-02T10:22:09.479982+00:00",
+      "package_sha256": "85ab63fe7a46036b9d5acba8e57005da7185ad6f5a7f27bc57271679437bfa34",
+      "review_path": "reviews/round-1-pm.md",
+      "review_sha256": "f5c455789e802919549c22aa164c294c2fcd3d978c251e6b249277ce03d9c476",
+      "prd_version": 1,
+      "design_version": 1
+    },
+    "ux": {
+      "reviewer": "ux_designer",
+      "decision": "accept",
+      "recorded_at": "2026-11-02T10:22:09.568118+00:00",
+      "package_sha256": "85ab63fe7a46036b9d5acba8e57005da7185ad6f5a7f27bc57271679437bfa34",
+      "review_path": "reviews/round-1-ux.md",
+      "review_sha256": "b6e1858618be7a1c01f2cca26fdf7abe79990a9eeea25b46232805c6779be225",
+      "prd_version": 1,
+      "design_version": 1
+    }
+  }
+}

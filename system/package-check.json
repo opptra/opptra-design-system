@@ -1,0 +1,10 @@
+{
+  "feature_id": "opptra-design-system",
+  "stage": "signed_off",
+  "valid": true,
+  "package_sha256": "85ab63fe7a46036b9d5acba8e57005da7185ad6f5a7f27bc57271679437bfa34",
+  "prd_version": 1,
+  "design_version": 1,
+  "reference_version": "0.1.0",
+  "scope": "internal PM/UX design handoff"
+}

@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "feature_id": "opptra-design-system",
+  "proposal_role": "ux",
+  "artifacts": {
+    "design": {
+      "path": "design.md",
+      "version": 1
+    }
+  },
+  "sources": [
+    {
+      "id": "S6",
+      "reference": "wireframes/index.html",
+      "kind": "assumption",
+      "summary": "Proposed reference gallery and synthetic brand-workspace examples created for this handoff; no live application data, connected actions or user-research evidence."
+    }
+  ],
+  "screens": [
+    {
+      "id": "DS00",
+      "path": "wireframes/index.html",
+      "anchor": "overview",
+      "states": [
+        "proposal-provenance",
+        "synthetic-disclosure",
+        "marketing-example"
+      ]
+    },
+    {
+      "id": "DS01",
+      "path": "wireframes/index.html",
+      "anchor": "language",
+      "states": [
+        "voice-examples",
+        "logo-network-fallback",
+        "imagery-icon-guidance"
+      ]
+    },
+    {
+      "id": "DS02",
+      "path": "wireframes/index.html",
+      "anchor": "foundations",
+      "states": [
+        "palette",
+        "contrast-warning",
+        "type",
+        "spacing",
+        "token-exports"
+      ]
+    },
+    {
+      "id": "DS03",
+      "path": "wireframes/index.html",
+      "anchor": "actions",
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "busy-illustration",
+        "destructive-confirmation"
+      ]
+    },
+    {
+      "id": "DS04",
+      "path": "wireframes/index.html",
+      "anchor": "inputs",
+      "states": [
+        "default",
+        "filled",
+        "invalid",
+        "valid",
+        "read-only",
+        "disabled",
+        "checked",
+        "selected",
+        "on",
+        "off",
+        "search-match",
+        "search-no-match"
+      ]
+    },
+    {
+      "id": "DS05",
+      "path": "wireframes/index.html",
+      "anchor": "navigation",
+      "states": [
+        "current",
+        "complete",
+        "upcoming",
+        "tab-selected",
+        "pagination-boundaries"
+      ]
+    },
+    {
+      "id": "DS06",
+      "path": "wireframes/index.html",
+      "anchor": "data",
+      "states": [
+        "known-zero",
+        "missing",
+        "stale",
+        "status",
+        "detail-action"
+      ]
+    },
+    {
+      "id": "DS07",
+      "path": "wireframes/index.html",
+      "anchor": "feedback",
+      "states": [
+        "error",
+        "retry",
+        "success",
+        "toast",
+        "dialog",
+        "expanded",
+        "collapsed",
+        "empty",
+        "illustrative-loading",
+        "determinate-progress",
+        "permission"
+      ]
+    },
+    {
+      "id": "DS08",
+      "path": "wireframes/index.html",
+      "anchor": "composition",
+      "states": [
+        "search",
+        "status-filter",
+        "no-results",
+        "clear-filters",
+        "row-specific-detail",
+        "review",
+        "save-demo",
+        "cancel",
+        "activity",
+        "stale",
+        "known-zero",
+        "missing",
+        "restricted-publish"
+      ]
+    },
+    {
+      "id": "DS09",
+      "path": "wireframes/index.html",
+      "anchor": "adoption",
+      "states": [
+        "adoption",
+        "ownership-proposal",
+        "versioning",
+        "migration",
+        "network-dependencies"
+      ]
+    }
+  ],
+  "requirement_screen_mapping": {
+    "R1": [
+      "DS00",
+      "DS01",
+      "DS02"
+    ],
+    "R2": [
+      "DS00",
+      "DS01"
+    ],
+    "R3": [
+      "DS02"
+    ],
+    "R4": [
+      "DS03",
+      "DS04",
+      "DS05",
+      "DS06",
+      "DS07"
+    ],
+    "R5": [
+      "DS03",
+      "DS04",
+      "DS05",
+      "DS06",
+      "DS07",
+      "DS08"
+    ],
+    "R6": [
+      "DS00",
+      "DS08"
+    ],
+    "R7": [
+      "DS05",
+      "DS08"
+    ],
+    "R8": [
+      "DS02",
+      "DS03",
+      "DS04",
+      "DS05",
+      "DS06",
+      "DS07",
+      "DS08"
+    ],
+    "R9": [
+      "DS00",
+      "DS03",
+      "DS04",
+      "DS05",
+      "DS07",
+      "DS08",
+      "DS09"
+    ],
+    "R10": [
+      "DS09"
+    ]
+  },
+  "questions": [],
+  "blockers": [],
+  "handoff_notes": [
+    "Reviewed PRD v1 before design completion; no blocking framing gaps.",
+    "Reference release0.1.0; durable design artifact version1. Sources/proposals and validation limits are explicit.",
+    "Owned files: design.md, wireframes/index.html, tokens.css, tokens.json, gallery.css, gallery.js.",
+    "84 semantic/primitive CSS tokens match JSON keys and raw values; 27 component families with shared + per-family usage/API/anatomy/content/state/a11y contracts.",
+    "Rendered desktop/mobile and behavioral checks are being run by coordinator; record actual results in validation.md. No blanket conformance, screen-reader, production or stakeholder approval claim.",
+    "Parent source audit/validation links are expected at feature root. Remote official logo and Google Fonts have usable fallback; no downloaded logo asset.",
+    "Package review/sign-off must use final coordinator snapshot after all changes."
+  ]
+}
