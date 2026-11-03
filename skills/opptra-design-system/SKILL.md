@@ -1,6 +1,6 @@
 ---
 name: opptra-design-system
-description: Use Opptra's versioned brand language, semantic tokens, and component contracts to create or review Opptra mockups, wireframes, prototypes, and product UI. Applies the bundled website-informed design reference to the user's task.
+description: Applies Opptra design system 0.1.0 — brand language, semantic tokens, and 27 component contracts — to mockups, wireframes, prototypes, HTML dashboards, and product UI. Use when someone asks to mock up a screen, change a page, design a dashboard, review UI, or make product UI look like Opptra. For presentations, documents, emails, and charts, use opptra-branding instead.
 ---
 
 # Opptra design system
@@ -13,6 +13,14 @@ Use the bundled **0.1.0** reference when this skill is invoked. It combines the 
 - Read [CSS tokens](../../system/wireframes/tokens.css) for exact values and aliases; use [JSON tokens](../../system/wireframes/tokens.json) when a token pipeline needs structured input. Both contain 84 matching entries.
 - Inspect [the visual gallery](../../system/wireframes/index.html) for visual relationships. The synthetic workspace is a composition example; design the user's actual task rather than reproducing its content.
 - Read [the source audit](../../system/source-audit.md) when provenance or an older brand instruction conflicts, and [validation](../../system/validation.md) before reporting what was tested.
+
+Public copies (use these when the `system/` files are not in the checkout):
+
+- https://opptra.github.io/opptra-design-system/manifest.json
+- https://opptra.github.io/opptra-design-system/guidelines.md
+- https://opptra.github.io/opptra-design-system/tokens.json
+- https://opptra.github.io/opptra-design-system/tokens.css
+- https://opptra.github.io/opptra-design-system/
 
 ## Apply the system
 
@@ -29,6 +37,8 @@ Preserve these task-specific distinctions:
 - A row's detail and action refer to that selected object. Saving and publishing have different consequences. Focus returns to a valid control after an overlay closes.
 
 The bundle refines older Opptra defaults for logo provenance, accessible action/link treatment and control boundaries. Use these versioned component rules for the assigned mockup; do not mix values from different versions silently. Refreshing the design system is a separate requested task, not a requirement for every mockup.
+
+For presentations, documents, emails, and charts, use `opptra-branding`. Do not add those recipes here.
 
 ## Handoff and review
 
