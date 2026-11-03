@@ -78,7 +78,7 @@ This is a proposed design reference. Consult the [source audit](source-audit.htm
 let skill = await source('skills/opptra-design-system/SKILL.md');
 skill = skill.replaceAll('../../system/wireframes/', '').replaceAll('../../system/design.md', 'guidelines.md')
   .replaceAll('../../system/source-audit.md', 'source-audit.md').replaceAll('../../system/validation.md', 'validation.md');
-skill = skill.slice(0, skill.indexOf('\nIn this repository,')) + '\n\nThis public reference is version 0.1.0. Use the adjacent guidelines, token files and gallery. This skill grants no permission to publish, send messages or modify external design systems.\n';
+skill = skill.slice(0, skill.indexOf('\nIn this repository,')) + '\n\nThis public reference is version 0.1.0. Fetch https://opptra.github.io/opptra-design-system/guidelines.md, https://opptra.github.io/opptra-design-system/tokens.json, https://opptra.github.io/opptra-design-system/tokens.css, and https://opptra.github.io/opptra-design-system/manifest.json. This skill grants no permission to publish, send messages or modify external design systems.\n';
 await write('SKILL.md', skill);
 
 const pages = { guidelines, 'source-audit': audit, validation, use: usage };
