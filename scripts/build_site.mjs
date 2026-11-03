@@ -9,6 +9,9 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.join(root, 'docs');
 const source = name => readFile(path.join(root, name), 'utf8');
 const write = (name, content) => writeFile(path.join(output, name), content);
+// Official browser and home-screen marks observed on opptra.com, 03 Nov 2026.
+// Reference the supplied assets without redrawing or altering the brand mark.
+const faviconLinks = '<link rel="icon" type="image/png" href="https://cdn.prod.website-files.com/6933cd7135f6e590ffef0761/693836051c4d45d5e901e5cb_opptra%20-%20favicon.png"><link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6933cd7135f6e590ffef0761/693836a5c918774d78c1cb48_opptra%20-%20webclip.png">';
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 await write('.nojekyll', '');
@@ -22,7 +25,8 @@ gallery = gallery.replaceAll('../design.md', 'guidelines.html')
   .replaceAll('../source-audit.md', 'source-audit.html')
   .replaceAll('../validation.md', 'validation.html')
   .replace('<a href="../prd.md">Requirements</a>', '<a href="use.html">Use in a mockup</a>')
-  .replace('appointed by Vijay', 'appointed by Opptra');
+  .replace('appointed by Vijay', 'appointed by Opptra')
+  .replace('</head>', `${faviconLinks}\n</head>`);
 await write('index.html', gallery);
 
 let guidelines = await source('system/design.md');
@@ -94,7 +98,7 @@ for (const [name, markdown] of Object.entries(pages)) {
     .replaceAll('<table>', '<div class="table-wrap" role="region" aria-label="Reference table, scroll horizontally if needed" tabindex="0"><table>')
     .replaceAll('</table>', '</table></div>');
   await write(`${name}.html`, `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(titles[name])} · Opptra design system</title><meta name="description" content="Opptra design system 0.1.0: brand language, component contracts and semantic tokens."><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;600;700&family=Raleway:wght@400;500;600&display=swap"><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="site.css"></head><body><a class="skip" href="#content">Skip to content</a><header><a href="index.html">Opptra design system</a><nav aria-label="Documentation"><a href="index.html">Gallery</a><a href="guidelines.html">Guidelines</a><a href="use.html">Use in a mockup</a><a href="tokens.json">JSON tokens</a></nav></header><main id="content"><p class="meta">PROPOSED REFERENCE · 0.1.0 · 02 NOV 2026</p><article>${body}</article><p class="notice"><a href="${name}.md">Read the Markdown source</a> · <a href="SKILL.md">Agent instructions</a></p></main><footer>Opptra design language · Proposed reference 0.1.0 · Synthetic demonstrations</footer></body></html>\n`);
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${faviconLinks}<title>${escape(titles[name])} · Opptra design system</title><meta name="description" content="Opptra design system 0.1.0: brand language, component contracts and semantic tokens."><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;600;700&family=Raleway:wght@400;500;600&display=swap"><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="site.css"></head><body><a class="skip" href="#content">Skip to content</a><header><a href="index.html">Opptra design system</a><nav aria-label="Documentation"><a href="index.html">Gallery</a><a href="guidelines.html">Guidelines</a><a href="use.html">Use in a mockup</a><a href="tokens.json">JSON tokens</a></nav></header><main id="content"><p class="meta">PROPOSED REFERENCE · 0.1.0 · 02 NOV 2026</p><article>${body}</article><p class="notice"><a href="${name}.md">Read the Markdown source</a> · <a href="SKILL.md">Agent instructions</a></p></main><footer>Opptra design language · Proposed reference 0.1.0 · Synthetic demonstrations</footer></body></html>\n`);
 }
 
 // Check every generated HTML and Markdown local destination before deployment.
